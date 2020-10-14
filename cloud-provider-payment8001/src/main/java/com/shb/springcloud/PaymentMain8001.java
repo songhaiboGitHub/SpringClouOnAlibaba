@@ -3,6 +3,7 @@ package com.shb.springcloud;
 import io.micrometer.core.instrument.util.StringUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * @create 2020-10-13 11:06 上午
  */
 @SpringBootApplication
+@EnableEurekaClient
 public class PaymentMain8001 {
     public static void main(String[] args) {
         SpringApplication.run(PaymentMain8001.class,args);
