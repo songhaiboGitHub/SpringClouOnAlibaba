@@ -11,8 +11,8 @@ import java.io.Serializable;
  * @create 2020-10-14 9:51 上午
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Payment implements Serializable {
     private Long id;
     private String serial;
