@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 public class Ordercontroller {
-    public static final String PATMENT_URL = "http://localhost:8001";
+    public static final String PATMENT_URL = "http://CLOUD-PAYMEN-SERVICE";
     @Resource
     private RestTemplate restTemplate;
 
