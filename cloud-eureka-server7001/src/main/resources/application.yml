@@ -9,3 +9,6 @@ eureka:
     fetch-registry: false       #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka/   #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
+  server:
+    enable-self-preservation: false #关闭自我保护机制，保证不可用服务及时剔除
+    eviction-interval-timer-in-ms: 2000 #心跳超时剔除时间
