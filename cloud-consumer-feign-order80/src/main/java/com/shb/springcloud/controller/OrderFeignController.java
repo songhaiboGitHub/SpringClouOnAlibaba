@@ -21,4 +21,8 @@ public class OrderFeignController {
         return paymentFeignService.get(id);
     }
 
+    @GetMapping("/consumer/payment/paymentFeignTimeout")
+    public String paymentFeignTimeout() throws InterruptedException {
+        return paymentFeignService.paymentFeignTimeout();
+    }
 }
