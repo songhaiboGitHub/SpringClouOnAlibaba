@@ -15,3 +15,9 @@ ribbon:
  # 指的是建立连接所用的时间,适用于网络状态正常的情况下,两端连接所用的时间
  ConnectTimeout: 5000
   
+  
+logging:
+ level:
+  # feign日志以什么级别监控哪个接口
+  com.shb.springcloud.service.PaymentFeignService: debug
+  
