@@ -1,0 +1,18 @@
+server:
+ port: 3344
+spring:
+ application:
+  name: cloud-config-center
+ cloud:
+  config:
+   server:
+    git:
+     uri: https://github.com/songhaiboGitHub/SpringClouOnAlibabaConfig.git    #填写你自己的github路径
+     search-paths:
+      - SpringClouOnAlibabaConfig
+   label: master
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:7001/eureka
+    
