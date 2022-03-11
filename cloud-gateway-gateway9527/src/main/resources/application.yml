@@ -18,10 +18,13 @@ spring:
     -  id: payment_routh2
        #uri: http://localhost:8001     #匹配后提供服务的路由地址
        uri: lb://cloud-payment-service
+#       filters:
+#        - АddRеquеѕtРаr аmеtеr=х- Rеqujеѕt-Іd,1024
        predicates:
         - Path=/payment/lb/**      #断言,路径相匹配的进行路由
 #        - After=2022-03-10T19:10:28.888+08:00[Asia/Shanghai]
-        - Cookie=username,zzyy #并且Cookie是username=zzyy才能访问
+#        - Cookie=username,zzyy #并且Cookie是username=zzyy才能访问
+#        - Header=X-Request-Id, \d+ #请求头中要有X-Request-Id属性并且值为整数的正则表达式
 
 
 eureka:
