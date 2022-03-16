@@ -1,0 +1,20 @@
+server:
+ port: 3377
+
+spring:
+ application:
+  name: nacos-config-client
+ cloud:
+  nacos:
+   discovery:
+    server-addr: localhost:8848 #服务注册中心地址
+   config:
+    server-addr: localhost:8848 #配置中心地址
+    file-extension: yaml #指定yaml格式的配置
+
+
+# Nacos同springcloud-config-样, 在项目初始化时,要保证先从配置中心进行配置拉取,拉取配置之后，才能保证项目的正常启动。
+# springboot中配置文件的加载是存在优先级顺序的，bootstrap优先级高于application
+
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+# nacos-config-client-dev.yaml
