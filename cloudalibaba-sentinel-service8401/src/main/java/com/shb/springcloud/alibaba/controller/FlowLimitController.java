@@ -63,11 +63,11 @@ public class FlowLimitController {
 
 
     @GetMapping("/testHotKey")
-    //类似与@HystrixCommand  blockHandler失败兜底，fallBack
+    //类似与@HystrixCommand  blockHandler阈值失败兜底 fallBack失败回滚方法
     @SentinelResource(value = "testHotKey", blockHandler = "deal_testHotKey")
     public String testHotKey(@RequestParam(value = "p1", required = false) String p1,
                              @RequestParam(value = "p2", required = false) String p2) {
-        //int age = 10/0;
+        //int age = 10/0; //异常 使用fallback属性
         return "------testHotKey";
     }
 
