@@ -1,4 +1,4 @@
-package com.shb.springcloud.config;
+package com.shb.springcloud.alibaba.config;
 
 
 import com.alibaba.druid.pool.DruidDataSource;

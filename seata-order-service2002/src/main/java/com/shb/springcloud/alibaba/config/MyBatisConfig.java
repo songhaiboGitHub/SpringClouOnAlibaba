@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@MapperScan({"com.shb.springcloud.com.shb.springcloud.dao"})
+@MapperScan({"com.shb.springcloud.alibaba.dao"})
 public class MyBatisConfig {
 
 
