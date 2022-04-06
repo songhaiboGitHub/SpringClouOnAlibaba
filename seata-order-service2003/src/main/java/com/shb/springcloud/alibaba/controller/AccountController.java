@@ -1,10 +1,10 @@
 package com.shb.springcloud.alibaba.controller;
 
-import com.shb.springcloud.alibaba.domain.CommonResult;
 import com.shb.springcloud.alibaba.service.AccountService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.shb.springcloud.alibaba.domain.*;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
